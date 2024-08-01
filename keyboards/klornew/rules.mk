@@ -2,7 +2,7 @@ MCU = atmega32u4
 BOOTLOADER = atmel-dfu
 
 SPLIT_KEYBOARD = yes
-SWAP_HANDS_ENABLE = yes
+SWAP_HANDS_ENABLE = no
 
 OLED_ENABLE = yes
 OLED_DRIVER = ssd1306

@@ -15,7 +15,7 @@ enum custom_keycodes {
     // LOWER,
     // RAISE,
     // ADJUST,
-    OS_SWAP,
+    // OS_SWAP,
     // MAKE_H,
 };
 
@@ -45,78 +45,62 @@ enum custom_keycodes {
 #define GUI_F5 MT(MOD_LGUI, KC_F5)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-/*
-   ┌───────────────────────────────────────────────────────────┐
-   │ b a s e QWERTZ                                                  │
-   └───────────────────────────────────────────────────────────┘
-             ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    Q    │    W    │    E    │    R    │    T    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    Z    │    U    │    I    │    O    │    P    │
-   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   Tab   │    A    │    S    │    D    │    F    │    G    ├─╯                ╰─┤    H    │    J    │    K    │    L    │    ;    │    :    │
-   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   Meh   │    Y    │    X    │    C    │    V    │    B    ││ PlayPau││ NextTra││    N    │    M    │    ,    │    .    │    _    │  Hyper  │
-   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │   Esc   │  BackSp │  Space  │  Shift  ││  Cntrl  │  Enter  │L SYMBOLS│  Repeat │
-                                 └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
+    /*
+       ┌───────────────────────────────────────────────────────────┐
+       │ b a s e QWERTZ                                                  │
+       └───────────────────────────────────────────────────────────┘
+                 ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
+                 │    Q    │    W    │    E    │    R    │    T    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    Z    │    U    │    I    │    O    │    P    │
+       ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
+       │   Tab   │    A    │    S    │    D    │    F    │    G    ├─╯                ╰─┤    H    │    J    │    K    │    L    │    ;    │    :    │
+       ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+       │   Meh   │    Y    │    X    │    C    │    V    │    B    ││ PlayPau││ NextTra││    N    │    M    │    ,    │    .    │    _    │  Hyper  │
+       └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
+                                     │   Esc   │  BackSp │  Space  │  Shift  ││  Cntrl  │  Enter  │L SYMBOLS│  Repeat │
+                                     └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
-   [_BASE_QWERTZ] = LAYOUT_polydactyl(
-              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                          KC_Z,     KC_U,     KC_I,     KC_O,     KC_P,
-    KC_TAB,   KC_A,     KC_S,     ALT_D,    GUI_F,    KC_G,                          KC_H,     GUI_J,    ALT_K,    KC_L,     KC_SEMICOLON,  KC_COLON,
-OSM(MOD_MEH), KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MNXT,  KC_N,     KC_M,     KC_COMMA, KC_DOT,   KC_COMM,  OSM(MOD_HYPR),
-                                  KC_ESC, KC_BSPC, KC_SPACE, OSM(MOD_LSFT),OSM(MOD_RCTL), KC_ENTER, TO(_SYMBOLS), QK_REP
- ),
-  // TODO: base layer colemak
-  // TODO: Mod Tap (@öäßc etc.)
-  // TODO: all ???
-/*
-   ┌───────────────────────────────────────────────────────────┐
-   │ s y m b o l s                                             │
-   └───────────────────────────────────────────────────────────┘
-             ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    "    │    #    │    [    │    ]    │    |    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    &    │    =    │    +    │    *    │    %    │
-   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   Tab   │    '    │    $    │    {    │    }    │    /    ├─╯                ╰─┤   left  │   down  │   up    │  right  │    ?    │    ▼    │
-   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   Meh   │    `    │    ^    │    (    │    )    │    \    ││   (    ││    )   ││    ~    │    -    │    <    │    >    │    !    │  Hyper  │
-   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │ L BASE  │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │L NUMBERS│    ▼    │
-                                 └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
+    [_BASE_QWERTZ] = LAYOUT_polydactyl(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Z, KC_U, KC_I, KC_O, KC_P, KC_TAB, KC_A, KC_S, ALT_D, GUI_F, KC_G, KC_H, GUI_J, ALT_K, KC_L, KC_SEMICOLON, KC_COLON, OSM(MOD_MEH), KC_Y, KC_X, KC_C, KC_V, KC_B, KC_MPLY, KC_MNXT, KC_N, KC_M, KC_COMMA, KC_DOT, KC_COMM, OSM(MOD_HYPR), KC_ESC, KC_BSPC, KC_SPACE, OSM(MOD_LSFT), OSM(MOD_RCTL), KC_ENTER, TO(_SYMBOLS), QK_REP),
+    // TODO: base layer colemak
+    // TODO: Mod Tap (@öäßc etc.)
+    // TODO: all ???
+    /*
+       ┌───────────────────────────────────────────────────────────┐
+       │ s y m b o l s                                             │
+       └───────────────────────────────────────────────────────────┘
+                 ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
+                 │    "    │    #    │    [    │    ]    │    |    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    &    │    =    │    +    │    *    │    %    │
+       ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
+       │   Tab   │    '    │    $    │    {    │    }    │    /    ├─╯                ╰─┤   left  │   down  │   up    │  right  │    ?    │    ▼    │
+       ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+       │   Meh   │    `    │    ^    │    (    │    )    │    \    ││   (    ││    )   ││    ~    │    -    │    <    │    >    │    !    │  Hyper  │
+       └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
+                                     │ L BASE  │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │L NUMBERS│    ▼    │
+                                     └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
-   [_SYMBOLS] = LAYOUT_polydactyl(
-              KC_DQT,   KC_HASH,  KC_LBRC,  KC_RBRC,  KC_PIPE,                        KC_AMPR,  KC_PEQL,  KC_PLUS,  KC_ASTR,  KC_PERCENT,
-    _______,  KC_QUOTE, KC_DLR,   ALT_LB,   GUI_RB,   KC_KP_SLASH,                    KC_LEFT,  GUI_DO,   ALT_UP,   KC_RIGHT, KC_QUES,  _______,
-    _______,  KC_GRAVE, KC_CIRC,  KC_LPRN,  KC_RPRN,  KC_BSLS,   _______,   _______,  KC_TILD,  KC_PMNS,  KC_LT,    KC_GT,    KC_EXLM,  _______,
-                          TO(_BASE_QWERTZ), _______,  _______,   _______,   _______,  _______,  TG(_NUMBERS), _______
-  ),
-/*
-   ┌───────────────────────────────────────────────────────────┐
-   │ n u m b e r s                                             │
-   └───────────────────────────────────────────────────────────┘
-             ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    .    │    7    │    8    │    9    │    *    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    %    │   F9    │   F10   │   F11   │   F12   │
-   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │    ???  │    ,    │    4    │  ALT/5  │  GUI/6  │    /    ├─╯                ╰─┤    +    │   F5    │   F6    │   F7    │   F8    │   ???   │
-   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   Meh   │    0    │    1    │    2    │    3    │    =    ││ L click││ R click││    -    │   F1    │   F2    │   F3    │   F4    │  Hyper  │
-   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │ L BASE  │    ▼    │    ▼    │     ▼   ││    ▼    │    ▼    │L SYMBOLS│    ▼    │
-                                 └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
-   [_NUMBERS] = LAYOUT_polydactyl(
-              KC_DOT,   KC_7,     KC_8,     KC_9,     KC_ASTR,                        KC_PERCENT, KC_F9,    KC_F10,   KC_F11,   KC_F12,
-    _______,  KC_COMMA, KC_4,     ALT_5,    GUI_6,    KC_KP_SLASH,                    KC_PLUS,  GUI_F5,    ALT_F6,   KC_F7,    KC_F8,    _______,
-    _______,  KC_0,     KC_1,     KC_2,     KC_3,     KC_EQUAL, KC_MS_BTN1,KC_MS_BTN2, KC_PMNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    _______,
-                                  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______
-  )
-};
+    [_SYMBOLS] = LAYOUT_polydactyl(KC_DQT, KC_HASH, KC_LBRC, KC_RBRC, KC_PIPE, KC_AMPR, KC_PEQL, KC_PLUS, KC_ASTR, KC_PERCENT, _______, KC_QUOTE, KC_DLR, ALT_LB, GUI_RB, KC_KP_SLASH, KC_LEFT, GUI_DO, ALT_UP, KC_RIGHT, KC_QUES, _______, _______, KC_GRAVE, KC_CIRC, KC_LPRN, KC_RPRN, KC_BSLS, _______, _______, KC_TILD, KC_PMNS, KC_LT, KC_GT, KC_EXLM, _______, TO(_BASE_QWERTZ), _______, _______, _______, _______, _______, TG(_NUMBERS), _______),
+    /*
+       ┌───────────────────────────────────────────────────────────┐
+       │ n u m b e r s                                             │
+       └───────────────────────────────────────────────────────────┘
+                 ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
+                 │    .    │    7    │    8    │    9    │    *    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    %    │   F9    │   F10   │   F11   │   F12   │
+       ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
+       │    ???  │    ,    │    4    │  ALT/5  │  GUI/6  │    /    ├─╯                ╰─┤    +    │   F5    │   F6    │   F7    │   F8    │   ???   │
+       ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+       │   Meh   │    0    │    1    │    2    │    3    │    =    ││ L click││ R click││    -    │   F1    │   F2    │   F3    │   F4    │  Hyper  │
+       └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
+                                     │ L BASE  │    ▼    │    ▼    │     ▼   ││    ▼    │    ▼    │L SYMBOLS│    ▼    │
+                                     └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
+    [_NUMBERS] = LAYOUT_polydactyl(KC_DOT, KC_7, KC_8, KC_9, KC_ASTR, KC_PERCENT, KC_F9, KC_F10, KC_F11, KC_F12, _______, KC_COMMA, KC_4, ALT_5, GUI_6, KC_KP_SLASH, KC_PLUS, GUI_F5, ALT_F6, KC_F7, KC_F8, _______, _______, KC_0, KC_1, KC_2, KC_3, KC_EQUAL, KC_MS_BTN1, KC_MS_BTN2, KC_PMNS, KC_F1, KC_F2, KC_F3, KC_F4, _______, _______, _______, _______, _______, _______, _______, _______, _______)};
 
 // #if defined(ENCODER_MAP_ENABLE)
 // TODO: change 2 to NUM_DIRECTIONS if it is defined
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [_BASE_QWERTZ] = { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_MS_WH_LEFT, KC_MS_WH_RIGHT)  },
+    [_BASE_QWERTZ] = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_MS_WH_LEFT, KC_MS_WH_RIGHT)},
     // [_SYMBOLS] = { ENCODER_CCW_CW(KC_VOLD, KV_VOLU),           ENCODER_CCW_CW(KC_SCRL, KC_PAUSE)  }, // Volume and Brightness
-    [_SYMBOLS] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),           ENCODER_CCW_CW(KC_BRIU, KC_BRID)  }, // Volume and Brightness
+    [_SYMBOLS] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_BRIU, KC_BRID)}, // Volume and Brightness
     // [_NUMBERS] = { ENCODER_CCW_CW(KC_UP, KC_DOWN),           ENCODER_CCW_CW(KC_LEFT, KC_RIGHT)  },
-    [_NUMBERS] = { ENCODER_CCW_CW(KC_MS_UP, KC_MS_DOWN),           ENCODER_CCW_CW(KC_MS_LEFT, KC_MS_RIGHT)  },
+    [_NUMBERS] = {ENCODER_CCW_CW(KC_MS_UP, KC_MS_DOWN), ENCODER_CCW_CW(KC_MS_LEFT, KC_MS_RIGHT)},
     // [3] = { ENCODER_CCW_CW(UG_PREV, UG_NEXT),           ENCODER_CCW_CW(KC_RIGHT, KC_LEFT) },
 };
 // TODO: mouse cursor speed -> constant speed http://qmk.local/features/mouse_keys
@@ -128,36 +112,35 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 
 char layer_state_str[24];
 char o_text[24] = "";
-int dmacro_num = 0;
+int  dmacro_num = 0;
 
 #ifdef DYNAMIC_MACRO_ENABLE
-    char dmacro_text[4][24] = { "", "RECORDING", "STOP RECORDING",  "PLAY RECORDING"};
-    static uint16_t dmacro_timer;
-    const char PROGMEM rec_ico[] = {0xD1, 0xE1, 0};
-    const char PROGMEM stop_ico[] = {0xD3, 0xE1, 0};
-    const char PROGMEM play_ico[] = {0xD2, 0xE1, 0};
+char               dmacro_text[4][24] = {"", "RECORDING", "STOP RECORDING", "PLAY RECORDING"};
+static uint16_t    dmacro_timer;
+const char PROGMEM rec_ico[]  = {0xD1, 0xE1, 0};
+const char PROGMEM stop_ico[] = {0xD3, 0xE1, 0};
+const char PROGMEM play_ico[] = {0xD2, 0xE1, 0};
 
+// DYNMACRO RECORD ├─────────────────────────────────────────────────────────────┐
+void dynamic_macro_record_start_user(void) {
+    dmacro_num = 1;
+    return;
+}
 
-    // DYNMACRO RECORD ├─────────────────────────────────────────────────────────────┐
-    void dynamic_macro_record_start_user(void) {
-          dmacro_num = 1;
-        return;
-    }
+// DYNMACRO STOP RECORDING ├─────────────────────────────────────────────────────┐
+void dynamic_macro_record_end_user(int8_t direction) {
+    dmacro_num   = 2;
+    dmacro_timer = timer_read();
+    return;
+}
 
-    // DYNMACRO STOP RECORDING ├─────────────────────────────────────────────────────┐
-    void dynamic_macro_record_end_user(int8_t direction) {
-          dmacro_num = 2;
-          dmacro_timer = timer_read();
-        return;
-    }
-
-    // DYNMACRO PLAY RECORDING ├─────────────────────────────────────────────────────┐
-    void dynamic_macro_play_user(int8_t direction) {
-          dmacro_num = 3;
-          dmacro_timer = timer_read();
-        return;
-    }
-#endif //DYNAMIC_MACRO_ENABLE
+// DYNMACRO PLAY RECORDING ├─────────────────────────────────────────────────────┐
+void dynamic_macro_play_user(int8_t direction) {
+    dmacro_num   = 3;
+    dmacro_timer = timer_read();
+    return;
+}
+#endif // DYNAMIC_MACRO_ENABLE
 
 // ┌───────────────────────────────────────────────────────────┐
 // │ o l e d   g r a p h i c s                                 │
@@ -380,4 +363,3 @@ bool oled_task_user(void) {
 //     return false;
 // }
 #endif // OLED_ENABLE
-
