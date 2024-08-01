@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include QMK_KEYBOARD_H
-#include "klor.h"
+#include "klorina.h"
 
 // #define GRAVE_MODS                                                             \
 //   (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT) | MOD_BIT(KC_LGUI) | MOD_BIT(KC_RGUI) | \
