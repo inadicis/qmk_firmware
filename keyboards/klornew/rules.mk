@@ -1,5 +1,5 @@
 MCU = atmega32u4
-BOOTLOADER = atmel-dfu
+BOOTLOADER = caterina
 
 SPLIT_KEYBOARD = yes
 SWAP_HANDS_ENABLE = no
