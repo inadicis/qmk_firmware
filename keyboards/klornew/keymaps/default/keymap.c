@@ -24,11 +24,11 @@ enum custom_keycodes {
 
 // LEFT HAND HOME ROW MODS ├───────────────────────────────────┐
 #define GUI_F MT(MOD_LGUI, KC_F)
-#define GUI_RB MT(MOD_LGUI, KC_RBRC)
-#define GUI_6 MT(MOD_LGUI, KC_LBRC)
+#define GUI_RB MT(MOD_LGUI, KC_RCBR)
+#define GUI_6 MT(MOD_LGUI, KC_6)
 #define ALT_D MT(MOD_LALT, KC_D)
 #define ALT_LB MT(MOD_LALT, KC_LBRC)
-#define ALT_5 MT(MOD_LALT, KC_RBRC)
+#define ALT_5 MT(MOD_LALT, KC_5)
 // #define CTL_S MT(MOD_LCTL, KC_S)
 // #define SHT_T MT(MOD_LSFT, KC_T)
 
@@ -46,7 +46,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
    ┌───────────────────────────────────────────────────────────┐
-   │ b a s e QWERTZ                                                  │
+   │ b a s e QWERTZ                                            │
    └───────────────────────────────────────────────────────────┘
              ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │    Q    │    W    │    E    │    R    │    T    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    Z    │    U    │    I    │    O    │    P    │
@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [_BASE_QWERTZ] = LAYOUT_polydactyl(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                          KC_Z,     KC_U,     KC_I,     KC_O,     KC_P,
     KC_TAB,   KC_A,     KC_S,     ALT_D,    GUI_F,    KC_G,                          KC_H,     GUI_J,    ALT_K,    KC_L,     KC_SEMICOLON,  KC_COLON,
-OSM(MOD_MEH), KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MNXT,  KC_N,     KC_M,     KC_COMMA, KC_DOT,   KC_COMM,  OSM(MOD_HYPR),
+OSM(MOD_MEH), KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MNXT,  KC_N,     KC_M,     KC_COMMA, KC_DOT,   KC_UNDS,  OSM(MOD_HYPR),
                                   KC_ESC, KC_BSPC, KC_SPACE, OSM(MOD_LSFT),OSM(MOD_RCTL), KC_ENTER, TO(_SYMBOLS), QK_REP
  ),
   // TODO: base layer colemak
@@ -94,7 +94,7 @@ OSM(MOD_MEH), KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MN
              ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │    .    │    7    │    8    │    9    │    *    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    %    │   F9    │   F10   │   F11   │   F12   │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │    ???  │    ,    │    4    │  ALT/5  │  GUI/6  │    /    ├─╯                ╰─┤    +    │   F5    │   F6    │   F7    │   F8    │   ???   │
+   │    [    │    ,    │    4    │  ALT/5  │  GUI/6  │    /    ├─╯                ╰─┤    +    │   F5    │   F6    │   F7    │   F8    │   ???   │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
    │   Meh   │    0    │    1    │    2    │    3    │    =    ││ L click││ R click││    -    │   F1    │   F2    │   F3    │   F4    │  Hyper  │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
@@ -102,7 +102,7 @@ OSM(MOD_MEH), KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MN
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
    [_NUMBERS] = LAYOUT_polydactyl(
               KC_DOT,   KC_7,     KC_8,     KC_9,     KC_ASTR,                        KC_PERCENT, KC_F9,    KC_F10,   KC_F11,   KC_F12,
-    _______,  KC_COMMA, KC_4,     ALT_5,    GUI_6,    KC_KP_SLASH,                    KC_PLUS,  GUI_F5,    ALT_F6,   KC_F7,    KC_F8,    _______,
+    KC_LBRC,  KC_COMMA, KC_4,     ALT_5,    GUI_6,    KC_KP_SLASH,                    KC_PLUS,  GUI_F5,    ALT_F6,   KC_F7,    KC_F8,    _______,
     _______,  KC_0,     KC_1,     KC_2,     KC_3,     KC_EQUAL, KC_MS_BTN1,KC_MS_BTN2, KC_PMNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    _______,
                                   _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______
   )
