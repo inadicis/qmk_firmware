@@ -53,16 +53,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
    │   Tab   │    A    │    S    │    D    │    F    │    G    ├─╯                ╰─┤    H    │    J    │    K    │    L    │    ;    │    :    │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   Meh   │    Y    │    X    │    C    │    V    │    B    ││ PlayPau││ NextTra││    N    │    M    │    ,    │    .    │    _    │  Hyper  │
+   │   Esc   │    Y    │    X    │    C    │    V    │    B    ││ PlayPau││ NextTra││    N    │    M    │    ,    │    .    │    _    │ Backspa │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │   Esc   │  BackSp │  Space  │  Shift  ││  Cntrl  │  Enter  │L SYMBOLS│  Repeat │
+                                 │ Leader  │ Lay Num │  Space  │  Shift  ││  Cntrl  │  Enter  │ Lay Sym │  Repeat │
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
    [_BASE_QWERTZ] = LAYOUT_polydactyl(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                          KC_Z,     KC_U,     KC_I,     KC_O,     KC_P,
     KC_TAB,   KC_A,     KC_S,     ALT_D,    GUI_F,    KC_G,                          KC_H,     GUI_J,    ALT_K,    KC_L,     KC_SEMICOLON,  KC_COLON,
-OSM(MOD_MEH), KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MNXT,  KC_N,     KC_M,     KC_COMMA, KC_DOT,   KC_UNDS,  OSM(MOD_HYPR),
-                                  KC_ESC, KC_BSPC, KC_SPACE, OSM(MOD_LSFT),OSM(MOD_RCTL), KC_ENTER, TO(_SYMBOLS), QK_REP
+    KC_ESC,   KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MNXT,  KC_N,     KC_M,     KC_COMMA, KC_DOT,   KC_UNDS, KC_BSPC,
+                           QK_LEAD, TT(_NUMBERS), KC_SPACE, OSM(MOD_LSFT),OSM(MOD_RCTL), KC_ENTER, TT(_SYMBOLS), QK_REP
  ),
   // TODO: base layer colemak
   // TODO: Mod Tap (@öäßc etc.)
@@ -74,18 +74,18 @@ OSM(MOD_MEH), KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MN
              ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │    "    │    #    │    [    │    ]    │    |    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    &    │    =    │    +    │    *    │    %    │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   Tab   │    '    │    $    │    {    │    }    │    /    ├─╯                ╰─┤   left  │   down  │   up    │  right  │    ?    │    ▼    │
+   │   Tab   │    '    │    $    │    {    │    }    │    /    ├─╯                ╰─┤   left  │   down  │   up    │  right  │    ?    │  Hyper  │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   Meh   │    `    │    ^    │    (    │    )    │    \    ││   (    ││    )   ││    ~    │    -    │    <    │    >    │    !    │  Hyper  │
+   │   Meh   │    `    │    ^    │    (    │    )    │    \    ││   (    ││    )   ││    ~    │    -    │    <    │    >    │    !    │  Delete │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │ L BASE  │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │L NUMBERS│    ▼    │
+                                 │ L BASE  │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │    ▼    │    ▼    │
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
    [_SYMBOLS] = LAYOUT_polydactyl(
               KC_DQT,   KC_HASH,  KC_LBRC,  KC_RBRC,  KC_PIPE,                        KC_AMPR,  KC_PEQL,  KC_PLUS,  KC_ASTR,  KC_PERCENT,
-    _______,  KC_QUOTE, KC_DLR,   ALT_LB,   GUI_RB,   KC_KP_SLASH,                    KC_LEFT,  GUI_DO,   ALT_UP,   KC_RIGHT, KC_QUES,  _______,
-    _______,  KC_GRAVE, KC_CIRC,  KC_LPRN,  KC_RPRN,  KC_BSLS,   _______,   _______,  KC_TILD,  KC_PMNS,  KC_LT,    KC_GT,    KC_EXLM,  _______,
-                          TO(_BASE_QWERTZ), _______,  _______,   _______,   _______,  _______,  TG(_NUMBERS), _______
+    _______,  KC_QUOTE, KC_DLR,   ALT_LB,   GUI_RB,   KC_KP_SLASH,                    KC_LEFT,  GUI_DO,   ALT_UP,   KC_RIGHT, KC_QUES,  OSM(MOD_HYPR),
+OSM(MOD_MEH), KC_GRAVE, KC_CIRC,  KC_LPRN,  KC_RPRN,  KC_BSLS,   _______,   _______,  KC_TILD,  KC_PMNS,  KC_LT,    KC_GT,    KC_EXLM,  KC_DELETE,
+                          TO(_BASE_QWERTZ), _______,  _______,   _______,   _______,  _______,   _______,  _______
   ),
 /*
    ┌───────────────────────────────────────────────────────────┐
@@ -94,17 +94,17 @@ OSM(MOD_MEH), KC_Y,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MN
              ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │    .    │    7    │    8    │    9    │    *    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    %    │   F9    │   F10   │   F11   │   F12   │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │    [    │    ,    │    4    │  ALT/5  │  GUI/6  │    /    ├─╯                ╰─┤    +    │   F5    │   F6    │   F7    │   F8    │   ???   │
+   │    [    │    ,    │    4    │  ALT/5  │  GUI/6  │    /    ├─╯                ╰─┤    +    │   F5    │   F6    │   F7    │   F8    │  Hyper  │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   Meh   │    0    │    1    │    2    │    3    │    =    ││ L click││ R click││    -    │   F1    │   F2    │   F3    │   F4    │  Hyper  │
+   │   Meh   │    0    │    1    │    2    │    3    │    =    ││ L click││ R click││    -    │   F1    │   F2    │   F3    │   F4    │  Delete │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │ L BASE  │    ▼    │    ▼    │     ▼   ││    ▼    │    ▼    │L SYMBOLS│    ▼    │
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
    [_NUMBERS] = LAYOUT_polydactyl(
               KC_DOT,   KC_7,     KC_8,     KC_9,     KC_ASTR,                        KC_PERCENT, KC_F9,    KC_F10,   KC_F11,   KC_F12,
-    KC_LBRC,  KC_COMMA, KC_4,     ALT_5,    GUI_6,    KC_KP_SLASH,                    KC_PLUS,  GUI_F5,    ALT_F6,   KC_F7,    KC_F8,    _______,
-    _______,  KC_0,     KC_1,     KC_2,     KC_3,     KC_EQUAL, KC_MS_BTN1,KC_MS_BTN2, KC_PMNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    _______,
-                                  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______
+    KC_LBRC,  KC_COMMA, KC_4,     ALT_5,    GUI_6,    KC_KP_SLASH,                    KC_PLUS,  GUI_F5,    ALT_F6,   KC_F7,    KC_F8,  OSM(MOD_HYPR),
+OSM(MOD_MEH), KC_0,     KC_1,     KC_2,     KC_3,     KC_EQUAL, KC_MS_BTN1,KC_MS_BTN2, KC_PMNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,  KC_DELETE,
+                             TO(_BASE_QWERTZ), _______, _______, _______,  _______,  _______,  _______,  _______
   )
 };
 
