@@ -37,12 +37,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │ Leader  │ Alt/=   │Nums/Spac│Shft/Dele││Cmd/Backs│Symb/Ente│    :    │  Repeat │
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
+    //
 
    [_BASE_QWERTZ] = LAYOUT_polydactyl(
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                          KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-MT(MOD_LCTL, KC_ESC),KC_A,KC_S,   KC_D,     KC_F,    KC_G,                          KC_H,      KC_J,     KC_K,    KC_L,     KC_SEMICOLON,  KC_UNDS,
-MT(MOD_MEH,KC_TAB),  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MNXT,  KC_N,     KC_M,     KC_COMMA, KC_DOT,   KC_PMNS, MT(MOD_HYPR, KC_AT),
-  QK_LEAD, MT(MOD_LALT, KC_PEQL), LT(_NUMBERS,KC_SPACE), MT(MOD_LSFT,KC_DELETE),   MT(MOD_RGUI,KC_BSPC), LT(_SYMBOLS, KC_ENTER), KC_COLON, QK_REP
+MT(MOD_LCTL, KC_ESC),KC_A,MT(MOD_LSFT, KC_S),MT(MOD_LALT, KC_D),MT(MOD_LGUI, KC_F),    KC_G,                          KC_H,      KC_J,     KC_K,    KC_L,     KC_SEMICOLON,  KC_QUOTE,
+KC_GRAVE,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY,   KC_MNXT,  KC_N,     MT(MOD_LGUI, KC_M),     MT(MOD_LALT, KC_COMMA), MT(MOD_LSFT, KC_DOT),   OSM(MOD_LSFT), CW_TOGG,
+  KC_MEH, LT(2, KC_SPACE), LT(1, KC_TAB), KC_ENTER,                     TG(3), KC_BSPC, OSL(1), KC_HYPR
  ),
 
     // TODO:  hg combo : escape
@@ -95,7 +96,7 @@ MT(MOD_MEH,KC_TAB),  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_MPLY, 
 // maybe < > on left rigt h l?
 //
 
-// #if defined(ENCODER_MAP_ENABLE)
+#if defined(ENCODER_MAP_ENABLE)
 // TODO: change 2 to NUM_DIRECTIONS if it is defined
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_BASE_QWERTZ] = { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_MS_WH_LEFT, KC_MS_WH_RIGHT)  },
@@ -106,7 +107,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     // [3] = { ENCODER_CCW_CW(UG_PREV, UG_NEXT),           ENCODER_CCW_CW(KC_RIGHT, KC_LEFT) },
 };
 // TODO: mouse cursor speed -> constant speed http://qmk.local/features/mouse_keys
-// #endif
+#endif
 
 // ┌───────────────────────────────────────────────────────────┐
 // │ d y n a m i c   m a c r o                                 │

@@ -28,20 +28,20 @@
 // │ e n c o d e r s                                 │
 // └─────────────────────────────────────────────────┘
 
-#define ENCODERS_PAD_A       { F5 }
-#define ENCODERS_PAD_B       { F4 }
-#define ENCODERS_PAD_A_RIGHT { F4 }
-#define ENCODERS_PAD_B_RIGHT { F5 }
-#define ENCODER_RESOLUTION 2
+/*#define ENCODERS_PAD_A       { F5 }*/
+/*#define ENCODERS_PAD_B       { F4 }*/
+/*#define ENCODERS_PAD_A_RIGHT { F4 }*/
+/*#define ENCODERS_PAD_B_RIGHT { F5 }*/
+/*#define ENCODER_RESOLUTION 2*/
 
 
 // ┌─────────────────────────────────────────────────┐
 // │ o l e d s                                       │
 // └─────────────────────────────────────────────────┘
 
-#ifdef OLED_ENABLE
-#define OLED_DISPLAY_128X64
-#define SPLIT_OLED_ENABLE
-//#define OLED_FONT_H  "./lib/glcdfont.c"
-#endif
-
+/*#ifdef OLED_ENABLE*/
+/*#define OLED_DISPLAY_128X64*/
+/*#define SPLIT_OLED_ENABLE*/
+/*//#define OLED_FONT_H  "./lib/glcdfont.c"*/
+/*#endif*/
+/**/
