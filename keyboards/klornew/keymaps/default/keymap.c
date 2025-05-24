@@ -52,6 +52,7 @@ KC_GRAVE,  KC_Z, MT(MOD_LSFT, KC_X), MT(MOD_LALT, KC_C), MT(MOD_LGUI,KC_V),     
   // TODO: base layer colemak
   // TODO: Mod Tap (@öäß, cedille, euro, etc.)
 /*
+
    ┌───────────────────────────────────────────────────────────┐
    │ s y m b o l s                                             │
    └───────────────────────────────────────────────────────────┘
@@ -69,7 +70,7 @@ KC_GRAVE,  KC_Z, MT(MOD_LSFT, KC_X), MT(MOD_LALT, KC_C), MT(MOD_LGUI,KC_V),     
    [_SYMBOLS] = LAYOUT_polydactyl(
               KC_AT,    KC_HASH,  KC_LBRC,  KC_RBRC,  KC_PIPE,                        KC_AMPR,  KC_UNDS,  KC_CIRC,  KC_ASTR,  KC_PERCENT,
     _______,  KC_DLR,   KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_SLASH,                        KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, KC_COLON, KC_DQT,
-    KC_EQUAL, KC_LT,    KC_GT,  MT(MOD_LALT, KC_LPRN), MT(MOD_LGUI, KC_RPRN),  KC_BSLS,   _______,   _______,  KC_TILD, MT(MOD_LGUI, KC_MINUS),MT(MOD_LALT, KC_QUES),KC_EXLM,MT(MOD_LCTL, KC_EQUAL),  _______,
+    KC_EQUAL, KC_LT,    KC_GT,   KC_LPRN, KC_RPRN,  KC_BSLS,   _______,   _______,  KC_TILD, MT(MOD_LGUI, KC_MINUS),MT(MOD_LALT, KC_QUES),KC_EXLM,MT(MOD_LCTL, KC_EQUAL),  _______,
                           _______, _______,  _______,   _______,   _______,  _______,   _______,  _______
   ),
 /*
