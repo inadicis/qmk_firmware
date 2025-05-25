@@ -61,7 +61,7 @@ KC_GRAVE,  KC_Z, MT(MOD_LSFT, KC_X),  KC_C, KC_V,     KC_B,     KC_MPLY,   KC_MN
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
    │    ▼    │    $    │    +    │    {    │    }    │    /    ├─╯                ╰─┤   left  │   down  │   up    │  right  │    :    │    "    │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │    =    │    <    │    >    │    (    │    )    │    \    ││   ▼    ││    ▼   ││    ~    │  Cmd/-  │ Opt/?   │    !    │  Ctrl/= │    ▼    │
+   │    =    │    <    │    >    │    (    │    )    │    \    ││   ▼    ││    ▼   ││    ~    │  Cmd/-  │     ?   │    !    │  Ctrl/= │    ▼    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │         │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │         │    ▼    │
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
@@ -70,7 +70,7 @@ KC_GRAVE,  KC_Z, MT(MOD_LSFT, KC_X),  KC_C, KC_V,     KC_B,     KC_MPLY,   KC_MN
    [_SYMBOLS] = LAYOUT_polydactyl(
               KC_AT,    KC_HASH,  KC_LBRC,  KC_RBRC,  KC_PIPE,                        KC_AMPR,  KC_UNDS,  KC_CIRC,  KC_ASTR,  KC_PERCENT,
     _______,  KC_DLR,   KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_SLASH,                        KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT, KC_COLON, KC_DQT,
-    KC_EQUAL, KC_LT,    KC_GT,   KC_LPRN, KC_RPRN,  KC_BSLS,   _______,   _______,  KC_TILD, MT(MOD_LGUI, KC_MINUS),MT(MOD_LALT, KC_QUES),KC_EXLM,MT(MOD_LCTL, KC_EQUAL),  _______,
+    KC_EQUAL, KC_LT,    KC_GT,   KC_LPRN, KC_RPRN,  KC_BSLS,   _______,   _______,  KC_TILD, MT(MOD_LGUI, KC_MINUS), KC_QUES,KC_EXLM,MT(MOD_LCTL, KC_EQUAL),  _______,
                           _______, _______,  _______,   _______,   _______,  _______,   _______,  _______
   ),
 /*
