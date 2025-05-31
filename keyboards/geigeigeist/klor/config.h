@@ -15,3 +15,5 @@
 #    define OLED_DISPLAY_128X64
 #    define OLED_FONT_H "keyboards/geigeigeist/klor/glcdfont.c"
 #endif
+
+#define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS, UNICODE_MODE_WINCOMPOSE, UNICODE_MODE_LINUX
