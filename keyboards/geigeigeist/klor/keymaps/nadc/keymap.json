@@ -4,9 +4,9 @@
     "layout": "LAYOUT",
     "layers": [
         [          "KC_Q", "KC_W", "KC_E", "KC_R", "KC_T",                                       "KC_Y", "KC_U", "KC_I", "KC_O", "KC_P",
-"MT(MOD_LCTL, KC_ESC)", "KC_A", "KC_S", "KC_D", "KC_F", "KC_G",                          "KC_H", "KC_J", "KC_K", "KC_L", "KC_SEMICOLON", "KC_QUOTE",
-"KC_GRAVE", "KC_Z", "MT(MOD_LSFT, KC_X)",  "KC_C", "KC_V", "KC_B", "KC_MPLY", "KC_MNXT", "KC_N", "MT(MOD_LGUI, KC_M)", "MT(MOD_LALT, KC_COMMA)", "MT(MOD_LSFT, KC_DOT)", "KC_EQUAL", "QK_REPEAT_KEY",
-            "OSM(MOD_MEH)", "LT(2, KC_SPACE)", "LT(1, KC_TAB)", "MT(MOD_LALT, KC_ENTER)",       "OSM(MOD_LSFT)", "KC_BSPC", "OSL(1)", "OSM(MOD_HYPR)"
+"MT(MOD_LCTL, KC_ESC)", "KC_A", "MT(MOD_LSFT, KC_S)", "MT(MOD_LALT, KC_D)", "MT(MOD_LGUI, KC_F)", "KC_G",                          "KC_H", "KC_J", "KC_K", "KC_L", "KC_SEMICOLON", "KC_QUOTE",
+"KC_GRAVE", "KC_Z", "KC_X",  "KC_C", "KC_V", "KC_B", "KC_MPLY", "KC_MNXT", "KC_N", "MT(MOD_LGUI, KC_M)", "MT(MOD_LALT, KC_COMMA)", "MT(MOD_LSFT, KC_DOT)", "KC_EQUAL", "QK_REPEAT_KEY",
+            "OSM(MOD_MEH)", "LT(2, KC_SPACE)", "MT(MOD_LCTL, KC_TAB)", "MT(MOD_LALT, KC_ENTER)",       "OSM(MOD_LSFT)", "KC_BSPC", "OSL(1)", "OSM(MOD_HYPR)"
         ],
         [
                     "KC_AT", "KC_HASH", "KC_LBRC", "KC_RBRC", "KC_PIPE",                     "KC_AMPR", "KC_UNDS", "KC_CIRC", "KC_ASTR",  "KC_PERCENT",
