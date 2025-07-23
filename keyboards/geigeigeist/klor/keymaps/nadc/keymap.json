@@ -10,8 +10,8 @@
         ],
         [
                     "KC_AT", "KC_HASH", "KC_LBRC", "KC_RBRC", "KC_PIPE",                     "KC_AMPR", "KC_UNDS", "KC_CIRC", "KC_ASTR",  "KC_PERCENT",
-    "_______", "KC_DLR", "KC_PLUS", "KC_LCBR", "KC_RCBR", "KC_SLASH",                    "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RIGHT", "KC_COLON",   "KC_DQT",
-    "KC_DLR", "KC_LT", "KC_GT", "KC_LPRN", "KC_RPRN", "KC_BSLS", "_______", "_______", "KC_TILD", "MT(MOD_LGUI, KC_MINUS)", "KC_QUES", "KC_EXLM", "KC_GRAVE",  "HYPR_T(KC_F12)",
+    "_______", "KC_DLR", "KC_PLUS", "KC_LCBR", "KC_RCBR", "KC_SLASH",                    "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RIGHT", "KC_COLON", "KC_DQT",
+    "KC_DLR", "KC_QUES", "KC_EXLM", "KC_LPRN", "KC_RPRN", "KC_BSLS", "_______", "_______", "KC_TILD", "MT(MOD_LGUI, KC_MINUS)", "KC_LT", "KC_GT", "_______",  "HYPR_T(KC_F12)",
               "KC_DQT", "LGUI(KC_SPACE)", "LCTL(KC_SPACE)", "KC_QUOTE",             "_______",  "_______",   "_______",  "_______"
         ],
         [
