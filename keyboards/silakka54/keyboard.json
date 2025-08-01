@@ -8,7 +8,8 @@
         "bootmagic": false,
         "extrakey": true,
         "mousekey": true,
-        "nkro": true
+        "nkro": true,
+        "repeat_key_enable": true
     },
     "split": {
         "enabled": true,
